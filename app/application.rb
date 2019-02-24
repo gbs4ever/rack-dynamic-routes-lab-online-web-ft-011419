@@ -7,8 +7,8 @@ class Application
 
       if req.path.match(/items/)
         dynamic =reg.path.split("/items/").last
-      if  @@item.find do |i|i.name == dynamic
-        resp.write "You requested the #{i.price}"
+       @@item.detect { |i|i.name == dynamic}
+        resp.write "You requested the #{item.price}"
 
     else
       resp.status = 400
