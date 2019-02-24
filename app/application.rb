@@ -9,10 +9,11 @@ class Application
         dynamic =reg.path.split("/items/").last
         @@item.find do |i|i.name == dynamic
         resp.write "You requested the #{i.price}"
-      end
+      
     else
       resp.status = 400
       resp.write "Item not found"
+    end
       else
         resp.status = 404
         resp.write "Route not found"
