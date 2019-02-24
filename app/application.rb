@@ -4,8 +4,8 @@ class Application
       req = Rack::Request.new(env)
 
 
-      if req.path == "/hello"
-        resp.write "You requested the"
+      if req.path == "/items"
+        resp.write "You requested the #{item.name}"
 
       else
         resp.status = 404
