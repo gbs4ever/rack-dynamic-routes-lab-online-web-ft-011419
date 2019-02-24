@@ -1,6 +1,16 @@
 class application
+  def call(env)
+      resp = Rack::Response.new
+      req = Rack::Request.new(env)
 
 
+      if req.path == "/hello"
+        resp.write "You requested the"
 
+      else
+        resp.status = 404
+      end
+       resp.finish
+end
 
 end
