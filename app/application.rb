@@ -7,7 +7,7 @@ class Application
 
       if req.path.match(/items/)
         dynamic =reg.path.split("/items/").last
-        @@item.find do |i|i.name == dynamic
+      if  @@item.find do |i|i.name == dynamic
         resp.write "You requested the #{i.price}"
 
     else
