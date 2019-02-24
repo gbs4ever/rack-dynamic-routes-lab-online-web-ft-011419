@@ -9,8 +9,7 @@ class Application
         dynamic =reg.path.split("/items/").last
        @@item.detect { |i|i.name == dynamic}
         resp.write "You requested the #{item.price}"
-
-    else
+      else
       resp.status = 400
       resp.write "Item not found"
     end
