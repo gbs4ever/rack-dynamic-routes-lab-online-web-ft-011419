@@ -5,7 +5,7 @@ class Application
 
 
       if req.path == "/items"
-        resp.write "You requested the #{item.name}"
+        resp.write "You requested the #{item.price}"
 
       else
         resp.status = 404
